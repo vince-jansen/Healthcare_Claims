@@ -120,14 +120,13 @@ pl.show()
 # The linear model R^2 = 75.15%, MAE = $4,165
 # The Tensorflow model R^2 ~ 81.0%, MAE ~ $3,100
 # The Pyrenn model R^2 ~ 84.5%, MAE ~ $2,900
-print(np.corrcoef(linear_predictions.T,Y_test.T)[0,1]**2)
-print(np.mean(np.abs(linear_predictions.T-Y_test.T)))
-print(np.corrcoef(nn_predictions.T,Y_test.T)[0,1]**2)
-print(np.mean(np.abs(nn_predictions.T-Y_test.T)))
-print(np.corrcoef(LM_predictions.T,Y_test.T)[0,1]**2)
-print(np.mean(np.abs(LM_predictions.T-Y_test.T)))
+print('The OLS model R^2 is' ,np.corrcoef(linear_predictions.T,Y_test.T)[0,1]**2)
+print('The OLS model MAE is' ,np.mean(np.abs(linear_predictions.T-Y_test.T)))
+print('The Tensorflow model R^2 is' ,np.corrcoef(nn_predictions.T,Y_test.T)[0,1]**2)
+print('The Tensorflow model MAE is' ,np.mean(np.abs(nn_predictions.T-Y_test.T)))
+print('The Pyrenn model R^2 is' ,np.corrcoef(LM_predictions.T,Y_test.T)[0,1]**2)
+print('The Pyrenn model MAE is' ,np.mean(np.abs(LM_predictions.T-Y_test.T)))
 
 # Accuracy measurements vary when only averaging over 10 trained models. Averaging over 100+ trained models will be more consistent
 # This small dataset causes overfitting easily and hinders accuracy. The easiest way to increase the accuracy of each model would be to add to the sample size
 # The neural networks are 5% to 10% more accurate!
-# 
