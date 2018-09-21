@@ -130,3 +130,4 @@ print(np.mean(np.abs(LM_predictions.T-Y_test.T)))
 # Accuracy measurements vary when only averaging over 10 trained models. Averaging over 100+ trained models will be more consistent
 # This small dataset causes overfitting easily and hinders accuracy. The easiest way to increase the accuracy of each model would be to add to the sample size
 # The neural networks are 5% to 10% more accurate!
+# 
