@@ -64,7 +64,7 @@ X_test = scaler.transform(X_test[:,1:])
 # Using hidden layers with 40 neurons each, 'relu' activation functons, 'adam' optimizer measured via 'mse'
 # A validation set uses 35% of the training data to prevent overfitting
 # The predictions are averaged across many different models with different training and validation sets
-for i in range(0,1):
+for i in range(0,10):
     model = keras.models.Sequential()
     model.add(keras.layers.Dense(40, input_dim=8, activation='relu'))
     model.add(keras.layers.Dense(40, activation='relu'))
@@ -99,7 +99,7 @@ net = pyrenn.CreateNN([8,5,1])
 pyrenn.train_LM(X_train.T, Y_train.T, net,verbose=1,k_max=20)
 
 # The predictions are averaged across many different trained models
-for i in range(0,1):
+for i in range(0,10):
     print(i)
     net = pyrenn.CreateNN([8,5,1])
     pyrenn.train_LM(X_train.T, Y_train.T, net,verbose=0,k_max=10)
