@@ -70,7 +70,8 @@ for j in range(0,2):
     X_train = scaler.transform(X_train[:,1:])
     X_test = scaler.transform(X_test[:,1:])
     
-    # A neural network via Keras on Tensorflow. 
+    # A neural network via Keras on Tensorflow.
+    # Tested with many different neural network structures
     # Using hidden layers with 40 neurons each, 'relu' activation functons, 'adam' optimizer measured via 'mse'
     # A validation set uses 35% of the training data to prevent overfitting
     # The predictions are averaged across many different models with different training and validation sets
